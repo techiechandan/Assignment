@@ -1,0 +1,40 @@
+<%- include('./common/header') %>
+    <div class="container">
+        <div class="sub-contaner">
+            <form method="post" id="form1">
+                <div class="form-title">
+                    <span>Enter Details</span>
+                </div>
+                <div class="input-field">
+                    <input type="text" name="username" id="name" placeholder="Enter Full Name" required>
+                </div>
+                <div class="input-field">
+                    <input type="text" name="contact" id="contact" placeholder="Enter Contact Number" required>
+                </div>
+                <div class="input-field">
+                    <button id="submit-btn">Generate</button>
+                </div>
+            </form>
+            
+            <form action="/get-uniqueId" method="post" id="form2" style="display:none">
+                <div class="form-title">
+                    <span>Enter Details</span>
+                </div>
+                <div class="input-field">
+                    <input type="text" name="contact" id="contact" placeholder="Enter Contact Number" required>
+                </div>
+                <div class="input-field">
+                    <button id="submit-btn">Get</button>
+                </div>
+            </form>
+            
+            <div class="input-field">
+                <button id="switch-btn">Get UniqueId</button>
+            </div>
+
+            <% if(message != undefined){%>
+                <div class="input-field" id="message"><%= message %></div>
+            <%}%>
+        </div>
+    </div>
+<%- include('./common/footer') %>

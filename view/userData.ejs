@@ -1,0 +1,33 @@
+<%- include('./common/header') %>
+    <div class="container">
+        <div class="sub-container">
+            <span>Your Details...</span>
+            <table class="table">
+                <thead>
+                    <th>Name</td>
+                    <th>Contact</td>
+                    <th>UniqueId</td>
+                </thead>
+                
+                    <tr>
+                        <% if(userData.length> 0){ %>
+                            <td>
+                                <%= userData[0].name %>
+                            </td>
+                            <td>
+                                <%= userData[0].contact %>
+                            </td>
+                            <td>
+                                <%= userData[0].uniqueId %>
+                            </td>
+                            <%}else{ %>
+                                <td colspan="5">Data not found</td>
+                            <%} %>
+                    </tr>
+            </table>
+            <div class="input-field">
+                <button> <a href="/">Generate New</a></button>
+            </div>
+        </div>
+    </div>
+    <%- include('./common/footer') %>
